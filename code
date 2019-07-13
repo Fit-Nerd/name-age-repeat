@@ -1,0 +1,16 @@
+from datetime import datetime
+now = datetime.now()
+name = input("Please enter your name: ")
+age = int(input("And next, how old are you? "))
+diff = 100 - age
+year = now.year + diff
+print("Well, " + name + ", you will turn 100 in " + str(year))
+mult = int(input("Now, pick a number from 1 - 5: "))
+while mult == 0 or mult > 5:
+    if mult == 0:
+        mult = int(input("Dude...0 is not between 1 and 5. Try again: "))
+        continue
+    elif mult > 5:
+        mult = int(input("That's more than 5, now isn't it? Try again: "))
+        continue
+print(("Well, " + name + ", you will turn 100 in " + str(year) + "\n") * mult)
